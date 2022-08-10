@@ -1,3 +1,69 @@
 body {
+  font-family: "Nunito", sans-serif;
+  padding: 1rem;
+}
+body .container {
+  max-width: 617px;
+  margin: 0 auto;
+}
+body .titulo-principal {
   font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+
+.botoes-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  border-bottom: 1px solid #aaaaaa;
+}
+.botoes-nav .botao__nav {
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+}
+
+.button__position {
+  display: flex;
+  justify-content: flex-end;
+}
+.button__position .button {
+  text-align: start;
+  width: 70px;
+  border: none;
+  border-radius: 4px;
+  background-color: #074ee8;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 11px;
+  background-image: url(/img/Trailing\ Icon.svg);
+  background-repeat: no-repeat;
+  background-position: 45px center;
+}
+
+.form-control {
+  margin-top: 1.19rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-control label {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #5b5b5b;
+  display: inline-block;
+}
+.form-control input {
+  border: 2px solid #AAAAAA;
+  border-radius: 4px;
+  display: block;
+  max-width: 100%;
+  padding: 0.6rem;
+}
+
+.form-position__email {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */
