@@ -1,5 +1,11 @@
 @import "../css/variaveis";
 
 body {
-  font-family: $font-family;
+  font-family: $font-Nunito;
+  padding: 1rem;
+  .titulo-principal{
+    font-family: $font-Inter;
+    font-weight: 600;
+    font-size: 1.12rem;
+  }
 }
