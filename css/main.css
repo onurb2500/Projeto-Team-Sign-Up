@@ -47,6 +47,7 @@ body .titulo-principal {
   margin-top: 1.19rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .form-control label {
   font-weight: 400;
@@ -60,6 +61,18 @@ body .titulo-principal {
   display: block;
   max-width: 100%;
   padding: 0.6rem;
+}
+.form-control i {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-control small {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  visibility: hidden;
 }
 
 .form-position__email {

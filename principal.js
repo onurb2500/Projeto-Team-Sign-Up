@@ -1,11 +1,6 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
-const github = document.getElementById("github");
-const cerficates = document.getElementById("cerficates");
-const teamName = document.getElementById("teamName");
-const institution = document.getElementById("institution");
-const graduation = document.getElementById("graduation");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -18,11 +13,6 @@ function checkInputs() {
   // pegando os valores dos input
   const usernameValue = username.value;
   const emailValue = email.value;
-  const githubValue = github.value;
-  const teamNameValue = teamName.value;
-  const cerficatesValue = cerficates.value;
-  const institutionValue = institution.value;
-  const graduationValue = graduation.value;
 
   // verificando um de cada vez
   if (usernameValue === "") {
@@ -41,48 +31,6 @@ function checkInputs() {
     setSucessFor(email);
   }
 
-  if (githubValue === "") {
-    setErrorFor(github, "O GitHub é obrigatório.");
-  } else {
-    setSucessFor(github);
-  }
-
-  if (teamNameValue === "") {
-    setErrorFor(teamName, "O Team Name é obrigatório.");
-  } else {
-    setSucessFor(teamName);
-  }
-
-  if (cerficatesValue === "") {
-    setErrorFor(cerficates, "O cerficates é obrigatório.");
-  } else {
-    setSucessFor(cerficates);
-  }
-
-  if (institutionValue === "") {
-    setErrorFor(institution, "O institution é obrigatório.");
-  } else {
-    setSucessFor(institution);
-  }
-
-  if (graduationValue === "") {
-    setErrorFor(graduation, "O graduation é obrigatório.");
-  } else {
-    setSucessFor(graduation);
-  }
-
-  // validado 100%
-  const formControls = form.querySelectorAll(".required");
-
-  const formIsValid = [...formControls].every((formControl) => {
-    // transformando em um array
-    return formControl.className === "form-control sucess"; // se tem a class sucess
-  });
-
-  // se tiver a class
-  if (formIsValid) {
-    alert("O formulário está 100% válido!");
-  }
 }
 
 function setErrorFor(input, message) {
