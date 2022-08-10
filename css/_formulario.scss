@@ -1,0 +1,25 @@
+@import "../css/variaveis";
+
+.form-control{
+  margin-top: 1.19rem;
+  display: flex;
+  flex-direction: column;
+  label{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $color-cinza-text;
+    display: inline-block;
+  }
+  input{
+    border: 2px solid #AAAAAA;
+    border-radius: 4px;
+    display: block; 
+    max-width: 100%;
+    padding: .6rem;
+  }
+}
+.form-position__email{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

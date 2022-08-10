@@ -3,6 +3,10 @@
 body {
   font-family: $font-Nunito;
   padding: 1rem;
+  .container{
+    max-width: 617px;
+    margin: 0 auto;
+  }
   .titulo-principal{
     font-family: $font-Inter;
     font-weight: 600;

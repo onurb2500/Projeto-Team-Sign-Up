@@ -1,8 +1,30 @@
 .botoes-nav{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  border-bottom: 1px solid $color-cinza-borda;
   .botao__nav{
     font-weight: 400;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $color-cinza-borda;
+  }
+}
+
+.button__position{
+  display: flex;
+  justify-content: flex-end;
+  .button{
+    text-align: start;
+    width: 70px;
+    border:none;
+    border-radius: 4px;
+    background-color: $color-azul-principal;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 11px;
+    background-image: url(/img/Trailing\ Icon.svg);
+    background-repeat: no-repeat;
+    background-position: 45px center;
   }
 }
