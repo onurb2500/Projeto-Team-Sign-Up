@@ -1,27 +1,27 @@
 @import "../css/variaveis";
 
-.form-control{
+.form-control {
   margin-top: 1.19rem;
   display: flex;
   flex-direction: column;
   position: relative;
-  label{
+  label {
     font-weight: 400;
     font-size: 0.8rem;
     color: $color-cinza-text;
     display: inline-block;
   }
-  input{
-    border: 2px solid #AAAAAA;
+  input {
+    border: 2px solid #aaaaaa;
     border-radius: 4px;
-    display: block; 
+    display: block;
     max-width: 100%;
-    padding: .6rem;
+    padding: 0.6rem;
   }
   i {
     position: absolute;
     top: 30px;
-    right: 10px; 
+    right: 10px;
     visibility: hidden;
   }
 
@@ -32,12 +32,27 @@
     visibility: hidden;
   }
 }
-.form-position__email{
+.form-position__email {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  .email{
+  .email {
     display: flex;
     flex-grow: 2;
   }
+}
+
+// Estilização do aniversário
+
+.birthday {
+  display: flex;
+}
+h3 {
+  font-weight: 400;
+  font-size: 1.12rem;
+  color: $color-cinza-text;
+  display: inline-block;
+}
+.check {
+  margin-top: 1.5rem;
 }

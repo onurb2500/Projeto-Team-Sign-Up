@@ -1,15 +1,18 @@
 body {
   font-family: "Nunito", sans-serif;
-  padding: 1rem;
 }
 body .container {
   max-width: 617px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 body .titulo-principal {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1.12rem;
+}
+body .header {
+  padding: 1rem;
 }
 
 .botoes-nav {
@@ -35,12 +38,22 @@ body .titulo-principal {
   border: none;
   border-radius: 4px;
   background-color: #074ee8;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 400;
   padding: 11px;
+}
+.button__position .button__next {
   background-image: url(/img/Trailing\ Icon.svg);
   background-repeat: no-repeat;
   background-position: 45px center;
+}
+.button__position .button__finish {
+  padding-right: 10px;
+  width: 85px;
+  text-align: end;
+  background-image: url(/img/Leading\ Icon.svg);
+  background-repeat: no-repeat;
+  background-position: 12px center;
 }
 
 .form-control {
@@ -56,7 +69,7 @@ body .titulo-principal {
   display: inline-block;
 }
 .form-control input {
-  border: 2px solid #AAAAAA;
+  border: 2px solid #aaaaaa;
   border-radius: 4px;
   display: block;
   max-width: 100%;
@@ -83,4 +96,37 @@ body .titulo-principal {
 .form-position__email .email {
   display: flex;
   flex-grow: 2;
+}
+
+.birthday {
+  display: flex;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.12rem;
+  color: #5b5b5b;
+  display: inline-block;
+}
+
+.check {
+  margin-top: 1.5rem;
+}
+
+.forms__slide {
+  max-height: 515px;
+  width: 100%;
+  overflow-x: hidden;
+  height: 900px;
+  margin: 0 auto;
+}
+.forms__slide .slides {
+  display: flex;
+  width: 300%;
+}
+.forms__slide .slides .slider {
+  width: 33.33%;
+}
+.forms__slide .slides .first {
+  margin-left: -33.33%;
 }/*# sourceMappingURL=main.css.map */

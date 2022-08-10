@@ -1,0 +1,17 @@
+.forms__slide {
+  max-height: 515px;
+  width: 100%;
+  overflow-x: hidden;
+  height: 900px;
+  margin: 0 auto;
+  .slides {
+    display: flex;
+    width: 300%;
+    .slider {
+      width: 33.33%;
+    }
+    .first {
+      margin-left: -33.33%;
+    }
+  }
+}

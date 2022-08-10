@@ -2,14 +2,17 @@
 
 body {
   font-family: $font-Nunito;
-  padding: 1rem;
   .container{
     max-width: 617px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   .titulo-principal{
     font-family: $font-Inter;
     font-weight: 600;
     font-size: 1.12rem;
+  }
+  .header{
+    padding: 1rem;
   }
 }
