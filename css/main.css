@@ -52,10 +52,10 @@ body .form-certificates {
 .button__position .button {
   text-align: start;
   width: 70px;
-  border: none;
+  border: 2px solid #074ee8;
   border-radius: 4px;
-  background-color: #074ee8;
-  color: #ffffff;
+  background-color: #FFFFFF;
+  color: #074ee8;
   font-weight: 400;
   padding: 11px;
 }
@@ -104,13 +104,12 @@ body .form-certificates {
   left: 0;
   visibility: hidden;
 }
-
-.form-position__email {
+.form-control .form-position__email {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.form-position__email .email {
+.form-control .form-position__email .email {
   display: flex;
   flex-grow: 2;
 }
@@ -156,7 +155,4 @@ h3 {
 }
 .forms__slide .slides .slider {
   width: 33.33%;
-}
-.forms__slide .slides .first {
-  margin-left: -33.33%;
 }/*# sourceMappingURL=main.css.map */
