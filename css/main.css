@@ -54,7 +54,7 @@ body .form-certificates {
   width: 70px;
   border: 2px solid #074ee8;
   border-radius: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #074ee8;
   font-weight: 400;
   padding: 11px;
@@ -64,13 +64,21 @@ body .form-certificates {
   background-repeat: no-repeat;
   background-position: 45px center;
 }
-.button__position .button__finish {
+.button__position .button__certificates {
   padding-right: 10px;
   width: 85px;
   text-align: end;
+}
+.button__position .button__finish {
   background-image: url(/img/Leading\ Icon.svg);
   background-repeat: no-repeat;
   background-position: 12px center;
+}
+.button__position .button__more {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-control {

@@ -19,7 +19,7 @@
     width: 70px;
     border: 2px solid $color-azul-principal;
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: $color-azul-principal;
     font-weight: 400;
     padding: 11px;
@@ -30,12 +30,22 @@
     background-position: 45px center;
   }
 
-  .button__finish{
+  .button__certificates {
     padding-right: 10px;
     width: 85px;
     text-align: end;
+  }
+
+  .button__finish {
     background-image: url(/img/Leading\ Icon.svg);
     background-repeat: no-repeat;
     background-position: 12px center;
+  }
+
+  .button__more {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
   }
 }
