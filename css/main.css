@@ -125,9 +125,10 @@ body .form-certificates {
 .birthday {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .birthday .birthday__group {
-  flex-grow: 1;
+  flex-grow: 2;
   height: 60px;
   display: flex;
   flex-direction: column;
@@ -138,6 +139,9 @@ body .form-certificates {
   text-align: start;
   border-radius: 4px;
   border: 2px solid #aaaaaa;
+}
+.birthday .birthday__group input {
+  max-width: 7.18rem;
 }
 
 h3 {
