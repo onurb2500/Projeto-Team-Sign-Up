@@ -20,14 +20,14 @@
         <div class="header container">
             <h1 class="titulo-principal">Team Sign Up</h1>
             <nav class="botoes-nav">
-                <button class="botao__nav">Basic</button>
-                <button class="botao__nav">Social</button>
-                <button class="botao__nav">Certificates</button>
+                <button class="botao__nav botao__basic" id="botao-basic">Basic</button>
+                <button class="botao__nav botao__social" id="botao-social">Social</button>
+                <button class="botao__nav botao__certificates" id="botao-certificates">Certificates</button>
             </nav>
         </div>
         <section class="forms__slide">
-            <div class="slides">
-                <div class="slider first">
+            <div class="slides" id="slides">
+                <div class="slider first" id="first">
                     <form id="form" class="form-basic container" class="">
                         <div class="form-control required">
                             <label for="username">Full Name *</label>
@@ -231,6 +231,18 @@
 
     <script src="https://kit.fontawesome.com/c71491c3f2.js" crossorigin="anonymous"></script>
     <script src="principal.js"></script>
+    <script src="slide.js"></script>
+    <script>
+        // let $ = document.querySelector.bind(document);
+        // var botaoBasic = document.querySelector("#botao-basic");
+        // var botaoSocial = docuemtn.querySelector("#botao-social");
+        // var botaoCertificates = document.querySelector("#botao-certificates");
+        // var slideFirst = document.getElementById("first");
+
+        // botaoBasic.addEventListener("click", function () {
+        //     slideFirst.style.marginLeft = "0%";
+        // });
+    </script>
 
 </body>
 

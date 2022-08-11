@@ -144,6 +144,7 @@ h3 {
 .forms__slide .slides .slider {
   width: 33.33%;
 }
-.forms__slide .slides .first {
+.first {
   margin-left: -33.33%;
+  transition: 1s;
 }/*# sourceMappingURL=main.css.map */
