@@ -17,10 +17,10 @@
   .button {
     text-align: start;
     width: 70px;
-    border: none;
+    border: 2px solid $color-azul-principal;
     border-radius: 4px;
-    background-color: $color-azul-principal;
-    color: #ffffff;
+    background-color: #FFFFFF;
+    color: $color-azul-principal;
     font-weight: 400;
     padding: 11px;
   }
