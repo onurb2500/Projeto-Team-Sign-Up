@@ -130,6 +130,19 @@ h3 {
   margin-top: 1.5rem;
 }
 
+.form-control.sucess input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
 .forms__slide {
   max-height: 515px;
   width: 100%;
@@ -144,7 +157,6 @@ h3 {
 .forms__slide .slides .slider {
   width: 33.33%;
 }
-.first {
+.forms__slide .slides .first {
   margin-left: -33.33%;
-  transition: 1s;
 }/*# sourceMappingURL=main.css.map */
