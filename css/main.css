@@ -128,6 +128,7 @@ body .form-certificates {
   justify-content: space-between;
 }
 .birthday .birthday__group {
+  flex-wrap: wrap;
   flex-grow: 2;
   height: 60px;
   display: flex;
@@ -140,8 +141,8 @@ body .form-certificates {
   border-radius: 4px;
   border: 2px solid #aaaaaa;
 }
-.birthday .birthday__group input {
-  max-width: 7.18rem;
+.birthday .age__birthday {
+  min-width: 1.79rem;
 }
 
 h3 {
@@ -181,4 +182,5 @@ h3 {
 }
 .forms__slide .slides .slider {
   width: 33.33%;
+  transition: 0.5s;
 }/*# sourceMappingURL=main.css.map */
