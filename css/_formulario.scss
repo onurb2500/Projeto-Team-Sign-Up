@@ -5,12 +5,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
   label {
     font-weight: 400;
     font-size: 0.8rem;
     color: $color-cinza-text;
     display: inline-block;
   }
+
   input {
     border: 2px solid #aaaaaa;
     border-radius: 4px;
@@ -18,6 +20,7 @@
     max-width: 100%;
     padding: 0.6rem;
   }
+
   i {
     position: absolute;
     top: 30px;
@@ -31,16 +34,17 @@
     left: 0;
     visibility: hidden;
   }
-}
 
-.form-position__email {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  .email {
+  .form-position__email {
     display: flex;
-    flex-grow: 2;
-  }
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .email {
+      display: flex;
+      flex-grow: 2;
+    }
+  } 
 }
 
 // Estilização do aniversário
@@ -48,12 +52,27 @@
 .birthday {
   display: flex;
 }
+
 h3 {
   font-weight: 400;
   font-size: 1.12rem;
   color: $color-cinza-text;
   display: inline-block;
 }
+
 .check {
   margin-top: 1.5rem;
+}
+
+.form-control.sucess input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
 }
