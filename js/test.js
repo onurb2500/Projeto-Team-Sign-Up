@@ -12,19 +12,19 @@ function validaOne() {
     const email = document.getElementById("email"); 
 
     if(username.value == "") {
-        setErrorFor(username, "O nome completo é obrigatório."); 
+        setErrorFor(username, "Full name required."); 
     } else {
         setSucessFor(username); 
     }
 
     if(email.value == "") {
-        setErrorFor(email, "O email é obrigatório.");
+        setErrorFor(email, "Mandatory email.");
     } else {
         setSucessFor(email);  
     }
 
     if(email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) { 
-        setErrorFor(email, "Insira um email válido."); 
+        setErrorFor(email, "Enter a valid email."); 
     } else {
         setSucessFor(email);  
     } 

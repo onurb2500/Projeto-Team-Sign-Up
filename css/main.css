@@ -4,7 +4,7 @@ body {
 body .container {
   max-width: 617px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 10%;
 }
 body .titulo-principal {
   font-family: "Inter", sans-serif;
@@ -12,7 +12,7 @@ body .titulo-principal {
   font-size: 1.12rem;
 }
 body .header {
-  padding: 1rem;
+  padding: 10% 10% 0 10%;
 }
 body .form-social {
   display: flex;
@@ -124,6 +124,20 @@ body .form-certificates {
 
 .birthday {
   display: flex;
+  flex-wrap: wrap;
+}
+.birthday .birthday__group {
+  flex-grow: 1;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.birthday .birthday__group .data-birthday {
+  margin-right: 0.5rem;
+  height: 40px;
+  text-align: start;
+  border-radius: 4px;
+  border: 2px solid #aaaaaa;
 }
 
 h3 {

@@ -5,7 +5,7 @@ body {
   .container {
     max-width: 617px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 10%;
   }
   .titulo-principal {
     font-family: $font-Inter;
@@ -13,7 +13,7 @@ body {
     font-size: 1.12rem;
   }
   .header {
-    padding: 1rem;
+    padding: 10% 10% 0 10%;
   }
 
   .form-social {

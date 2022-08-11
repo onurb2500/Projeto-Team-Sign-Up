@@ -30,7 +30,7 @@ inputEmail.addEventListener("blur", verifica);
 
         // verificando um de cada vez
         if (usernameValue == "") {
-            setErrorFor(username, "O nome completo é obrigatório.");
+            setErrorFor(username, "Full name required.");
         } else {
             console.log("entrando");
             setSucessFor(username);

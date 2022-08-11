@@ -44,13 +44,28 @@
       display: flex;
       flex-grow: 2;
     }
-  } 
+  }
 }
 
 // Estilização do aniversário
 
 .birthday {
   display: flex;
+  flex-wrap: wrap;
+  .birthday__group {
+    flex-grow: 1;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    .data-birthday {
+      // width: 7.18rem;
+      margin-right: 0.5rem;
+      height: 40px;
+      text-align: start;
+      border-radius: 4px;
+      border: 2px solid #aaaaaa;
+    }
+  }
 }
 
 h3 {

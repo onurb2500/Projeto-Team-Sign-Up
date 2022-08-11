@@ -69,7 +69,7 @@
                             <div class="birthday">
                                 <div class="birthday__group">
                                     <label for="day">Day</label>
-                                    <select id="select-day">
+                                    <select id="select-day"  class="data-birthday">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="birthday__group">
                                     <label for="month">Month</label>
-                                    <select id="select-month">
+                                    <select id="select-month" class="data-birthday">
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                         <option value="03">03</option>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="birthday__group">
                                     <label for="year">Year</label>
-                                    <select id="select-year">
+                                    <select id="select-year" class="data-birthday">
                                         <option value="1922">1922</option>
                                         <option value="1923">1923</option>
                                         <option value="1924">1924</option>
@@ -161,12 +161,11 @@
                                         <option value="1956">1956</option>
                                     </select>
                                 </div>
+                                <div class="birthday__group">
+                                    <label for="age">Age</label>
+                                    <input id="age" type="text"></input>
+                                </div>
                             </div>
-                            <div class="birthday__group">
-                                <label for="age">Age</label>
-                                <h4 id="age"></h4>
-                            </div>
-
                         </div>
 
                         <div class="check">
@@ -248,13 +247,13 @@
     </div>
 
     <script src="https://kit.fontawesome.com/c71491c3f2.js" crossorigin="anonymous"></script>
-    <!-- <script src="principal.js"></script> -->
-    <script src="slide.js"></script>
-    <script src="test.js"></script>
-    <!-- <script src="validation.js"></script> -->
-    <!-- <script src="birthday.js"></script> -->
+    <!-- <script src="/js/principal.js"></script> -->
+    <script src="/js/slide.js"></script>
+    <script src="/js/test.js"></script>
+    <!-- <script src="/js/validation.js"></script> -->
+    <!-- <script src="/js/birthday.js"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="jquery.mask.js"></script>
+    <script type="text/javascript" src="/js/jquery.mask.js"></script>
     <script type="text/javascript">
         $(document).ready(function () { 
             $('#phone').mask('(00) 0 0000-0000');
