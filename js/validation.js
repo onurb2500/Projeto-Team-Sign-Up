@@ -71,6 +71,5 @@ inputEmail.addEventListener("blur", verifica);
         if (inputNameVal && inputEmailVal/*&& inputAgeVal && inputPhoneVal && checked*/) {
             // botaoNextUm.style. = "";
             // botaoSocial.style.pointerEvents = "visible";
-            botaoNextUm.style.display = "none";
         };
     }
