@@ -53,8 +53,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
   .birthday__group {
+    flex-wrap: wrap;
     flex-grow: 2;
     height: 60px;
     display: flex;
@@ -67,9 +67,9 @@
       border-radius: 4px;
       border: 2px solid #aaaaaa;
     }
-    input{
-      max-width: 7.18rem;
-    }
+  }
+  .age__birthday{
+    min-width: 1.79rem;
   }
 }
 
