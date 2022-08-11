@@ -14,6 +14,23 @@ body .titulo-principal {
 body .header {
   padding: 1rem;
 }
+body .form-social {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .form-basic {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .form-certificates {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+}
 
 .botoes-nav {
   display: flex;
@@ -126,7 +143,4 @@ h3 {
 }
 .forms__slide .slides .slider {
   width: 33.33%;
-}
-.forms__slide .slides .first {
-  margin-left: -33.33%;
 }/*# sourceMappingURL=main.css.map */

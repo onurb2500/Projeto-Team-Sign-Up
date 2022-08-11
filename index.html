@@ -28,7 +28,7 @@
         <section class="forms__slide">
             <div class="slides">
                 <div class="slider first">
-                    <form id="form" class="form container"  class="">
+                    <form id="form" class="form-basic container" class="">
                         <div class="form-control required">
                             <label for="username">Full Name *</label>
                             <input type="text" id="username" placeholder="Foo Bar" />
@@ -180,18 +180,19 @@
                     </form>
                 </div>
                 <div class="slider">
-                    <form id="form" class="form container">
-                        <div class="form-control">
-                            <label for="linkedin">LinkedIn</label>
-                            <input type="url" id="linkedin">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="github">Github *</label>
-                            <input type="url" id="github" />
-                            <i class="fas fa-exclamation-circle"></i>
-                            <i class="fas fa-check-circle"></i>
-                            <small>Mensagem de erro</small>
+                    <form id="form" class="form-social container">
+                        <div>
+                            <div class="form-control">
+                                <label for="linkedin">LinkedIn</label>
+                                <input type="url" id="linkedin">
+                            </div>
+                            <div class="form-control">
+                                <label for="github">Github *</label>
+                                <input type="url" id="github" />
+                                <i class="fas fa-exclamation-circle"></i>
+                                <i class="fas fa-check-circle"></i>
+                                <small>Mensagem de erro</small>
+                            </div>
                         </div>
 
                         <div class="button__position">
@@ -200,7 +201,7 @@
                     </form>
                 </div>
                 <div class="slider">
-                    <form id="form" class="form container">
+                    <form id="form" class="form-certificates container">
                         <div class="form-control">
                             <div>
                                 <label for="cerficates">Cerficates *</label>
@@ -219,7 +220,6 @@
                             <label for="graduation">Graduation *</label>
                             <input type="text" id="graduation">
                         </div>
-
                         <div class="button__position">
                             <button class="button button__finish"> Finish</button>
                         </div>
