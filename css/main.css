@@ -50,8 +50,8 @@ body .form-certificates {
 .botoes-nav .botao__social {
   pointer-events: none;
 }
-.botoes-nav .botao__certificates {
-  pointer-events: none;
+.botoes-nav #botaoMore {
+  pointer-events: visible;
 }
 
 .button__position {
