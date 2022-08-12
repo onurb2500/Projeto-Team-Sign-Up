@@ -22,7 +22,8 @@ botaoCertificates.addEventListener("click", function () {
 
 // Paginação pelos botões inferiores
 
-botaoNextUm.addEventListener("click", function() {
+botaoNextUm.addEventListener("click", function(event) {
+    event.preventDefault();
     slideFirst.style.marginLeft = "-33.33%";
 });
 

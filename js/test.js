@@ -1,7 +1,7 @@
 // validação Basic
 const inputName = document.getElementById("username");
 const inputNickname = document.getElementById("nickname");
-const inputEmail = document.getElementById("email"); 
+const inputEmail = document.getElementById("email");
 const inputPhone = document.getElementById("phone");
 const inputDay = document.getElementById("select-day");
 const inputMonth = document.getElementById("select-month");
@@ -11,43 +11,43 @@ const checkbox = document.getElementById("check");
 inputName.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputNickname.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputEmail.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputPhone.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputDay.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputMonth.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 inputYear.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne(); 
+    validaOne();
 });
 
 // checkbox.addEventListener("click", function(){
@@ -62,49 +62,56 @@ inputYear.addEventListener("blur", (eventOne) => {
 //     }  
 // });  
 
-function validaOne() { 
-    const username = document.getElementById("username"); 
-    const email = document.getElementById("email");  
-    const buttonOne = document.getElementById("botao-next-um"); 
+function validaOne() {
+    const username = document.getElementById("username");
+    const age = document.getElementById("age");
+    const email = document.getElementById("email");
+    const buttonOne = document.getElementById("botao-next-um");
     const buttonSocial = document.getElementById("botao-social");
     const checkValida = document.getElementById("check")
-    var usernameValida = false; 
-    var emailValida = false; 
+    var usernameValida = false;
+    var emailValida = false;
 
-    if(username.value == "") {
-        setErrorFor(username, "Full name required."); 
+    if (username.value == "") {
+        setErrorFor(username, "Full name required.");
     } else {
-        setSucessFor(username); 
+        setSucessFor(username);
         usernameValida = true;
     }
 
-    if(email.value == "") {
+    if (email.value == "") {
         setErrorFor(email, "Mandatory email.");
     } else {
-        setSucessFor(email);  
+        setSucessFor(email);
         emailValida = true;
     }
 
-    if(email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) { 
-        setErrorFor(email, "Enter a valid email."); 
+    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
+        setErrorFor(email, "Enter a valid email.");
     } else {
-        setSucessFor(email); 
-        emailValida = true;  
-    } 
-
-    if(checkValida.value == "") {
-        setErrorFor(checkValida); 
-    } else {
-        setSucessFor(checkValida); 
+        setSucessFor(email);
+        emailValida = true;
     }
+
+    // if(checkValida.value == "") {
+    //     setErrorFor(checkValida); 
+    // } else {
+    //     setSucessFor(checkValida); 
+    // }
 
     // validando a navegação
-    if(usernameValida == true && emailValida == true) { 
-        buttonSocial.style.pointerEvents = "visible"; 
+    var name;
+    if (usernameValida == true && emailValida == true) {
+        buttonSocial.style.pointerEvents = "visible";
+        localStorage.name = username.value;
+        localStorage.nickname = inputNickname.value;
+        localStorage.email = email.value;
+        localStorage.phone = inputPhone.value;
+        localStorage.age = age.value;
     } else {
-        buttonSocial.style.pointerEvents = "none"; 
+        buttonSocial.style.pointerEvents = "none";
     }
-} 
+}
 
 // validação Social
 const buttonTwo = document.getElementById("botao-next-dois");
@@ -112,18 +119,18 @@ const buttonTwo = document.getElementById("botao-next-dois");
 buttonTwo.addEventListener("click", (eventTwo) => {
     eventTwo.preventDefault();
 
-    validacaoTwo();  
-}); 
+    validacaoTwo();
+});
 
-function validacaoTwo() { 
-    const github = document.getElementById("github"); 
+function validacaoTwo() {
+    const github = document.getElementById("github");
 
-    if(github.value == "") {
-        setErrorFor(github, "O GitHub é obrigatório."); 
+    if (github.value == "") {
+        setErrorFor(github, "O GitHub é obrigatório.");
     } else {
-        setSucessFor(github); 
+        setSucessFor(github);
     }
-} 
+}
 
 // validação Certificates
 const buttonThree = document.getElementById("botao-finish");
@@ -134,36 +141,29 @@ buttonThree.addEventListener("click", (eventThree) => {
     validacaoThree();
 });
 
-function validacaoThree() { 
-    const cerficates = document.getElementById("cerficates");
-    const teamName = document.getElementById("teamName"); 
+function validacaoThree() {
+    const teamName = document.getElementById("teamName");
     const institution = document.getElementById("institution");
     const graduation = document.getElementById("graduation");
 
-    if(cerficates.value == "") {
-        setErrorFor(cerficates, "O certificado é obrigatório."); 
+    if (teamName.value == "") {
+        setErrorFor(teamName, "O certificado é obrigatório.");
     } else {
-        setSucessFor(cerficates); 
+        setSucessFor(teamName);
     }
 
-    if(teamName.value == "") {
-        setErrorFor(teamName, "O certificado é obrigatório."); 
+    if (institution.value == "") {
+        setErrorFor(institution, "A institution é obrigatório.");
     } else {
-        setSucessFor(teamName); 
+        setSucessFor(institution);
     }
 
-    if(institution.value == "") {
-        setErrorFor(institution, "A institution é obrigatório."); 
+    if (graduation.value == "") {
+        setErrorFor(graduation, "O graduation é obrigatório.");
     } else {
-        setSucessFor(institution); 
+        setSucessFor(graduation);
     }
-
-    if(graduation.value == "") {
-        setErrorFor(graduation, "O graduation é obrigatório."); 
-    } else {
-        setSucessFor(graduation); 
-    }  
-} 
+}
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
@@ -171,11 +171,22 @@ function setErrorFor(input, message) {
 
     small.innerText = message;
 
-    formControl.className = "form-control error"; 
-} 
+    formControl.className = "form-control error";
+}
 
 function setSucessFor(input) {
-    const formControl = input.parentElement; 
+    const formControl = input.parentElement;
 
-    formControl.className = "form-control sucess";  
-} 
+    formControl.className = "form-control sucess";
+}
+
+function inicia() {
+    username.value=localStorage.name;
+    inputNickname.value=localStorage.nickname;
+    email.value=localStorage.email;
+    inputPhone.value=localStorage.phone;
+    age.value=localStorage.age;
+    validaOne();
+}
+
+window.addEventListener("load", inicia);
