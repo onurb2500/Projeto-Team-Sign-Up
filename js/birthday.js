@@ -7,28 +7,31 @@ var month = date.getMonth() + 1 ;
 var year = date.getFullYear();
 
 //Pegando o input de dia, mês e ano
-var inputDay = document.querySelector("#select-day").value;
-var inputMonth = document.querySelector("#select-month").value;
-var inputYear = document.querySelector("#select-year").value;
 
 var inputYearEvent = document.querySelector("#select-year");
 
 inputYearEvent.addEventListener("blur", function() {
-
+    
     calcula();
-    console.log(calcula);
 })
 
 function calcula() {
+    var inputDate = document.querySelector("#select-day").value;
+    var inputMonthh = document.querySelector("#select-month").value;
+    var inputYearr = document.querySelector("#select-year").value;
 
     var age;
 
-    age = year - inputYear;
-    console.log(age);
-    if(month < inputMonth || month == inputMonth && day < inputDay) {
+    age = year - inputYearr;
+    console.log(inputDate);
+    console.log(inputMonthh);
+    console.log(inputYearr);
+
+
+    if(month < inputMonthh || month == inputMonthh && day < inputDate) {
         age--;
-        console.log(age);
     }
+    console.log(age);
     return age;
 }
 
