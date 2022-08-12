@@ -31,7 +31,7 @@
                     <form id="form" class="form-basic container" class="">
                         <div class="form-control required">
                             <label for="username">Full Name *</label>
-                            <input type="text" id="username" placeholder="Foo Bar" autocomplete="off"/>
+                            <input type="text" id="username" placeholder="Foo Bar" autocomplete="off" />
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro</small>
@@ -39,7 +39,7 @@
 
                         <div class="form-control">
                             <label for="nickname">Nickname</label>
-                            <input type="text" id="nickname" placeholder="Juanito" autocomplete="off"/>
+                            <input type="text" id="nickname" placeholder="Juanito" autocomplete="off" />
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro</small>
@@ -47,7 +47,7 @@
                         <div class="form-position__email">
                             <div class="form-control required email">
                                 <label for="email">Email *</label>
-                                <input type="email" id="email" placeholder="foo@bar.com" autocomplete="off"/>
+                                <input type="email" id="email" placeholder="foo@bar.com" autocomplete="off" />
                                 <i class="fas fa-exclamation-circle"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <small>Mensagem de erro</small>
@@ -55,7 +55,7 @@
 
                             <div class="form-control">
                                 <label for="phone">Phone</label>
-                                <input type="tel" id="phone" placeholder="(XX) 0 0000-0000" autocomplete="off"/>
+                                <input type="tel" id="phone" placeholder="(XX) 0 0000-0000" autocomplete="off" />
                                 <i class="fas fa-exclamation-circle"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <small>Mensagem de erro</small>
@@ -169,8 +169,12 @@
                         </div>
 
                         <div class="check">
-                            <input type="checkbox" name="check">
-                            <label for="check">I accept the terms and privacy</label>
+                            <<<<<<< HEAD <input type="checkbox" name="check">
+                                <label for="check">I accept the terms and privacy</label>
+                                =======
+                                <input type="checkbox" name="check" id="check">
+                                <label for="check">I accept the terms and privacy</label for="">
+                                >>>>>>> 452676e3a30f5e10bf96ec95828d0cdf1f2db4ca
                         </div>
 
                         <div class="button__position">
@@ -203,17 +207,27 @@
                     <form id="form" class="form-certificates container">
                         <div>
                             <div class="form-control">
+
                                 <label for="cerficates">Cerficates *</label>
-                                <input type="text" id="cerficates"> 
+                                <input type="text" id="cerficates">
                                 <button><img src="/img/Leading Icon.svg" alt=""></button>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <small>Mensagem de erro</small>
+
+                                <label for="cerficates">Cerficates</label>
+                                <input type="text" id="cerficates">
+
                             </div>
+
+                            <div>
+                                <ul id="ul" class="lista-normal">
+
+                                </ul>
+                            </div>
+
                             <div class="button__position">
-                                <button class="button button__more button__certificates"><img
-                                        src="/img/Leading Icon (1).svg" alt=""> More <img src="/img/Trailing Icon.svg"
-                                        alt=""></button>
+                                <button id="botaoMore" class="button button__more button__certificates"><img src="/img/Leading Icon (1).svg" alt=""> More <img src="/img/Trailing Icon.svg" alt=""></button>
                             </div>
                         </div>
 
@@ -253,15 +267,12 @@
     <!-- <script src="/js/principal.js"></script> -->
     <script src="/js/slide.js"></script>
     <script src="/js/test.js"></script>
-    <!-- <script src="/js/validation.js"></script> --> 
+    <script src="js/certificados.js"></script>
+    <!-- <script src="/js/validation.js"></script> -->
     <!-- <script src="/js/birthday.js"></script> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/birthday.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="/js/jquery.mask.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {

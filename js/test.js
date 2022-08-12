@@ -6,6 +6,7 @@ const inputPhone = document.getElementById("phone");
 const inputDay = document.getElementById("select-day");
 const inputMonth = document.getElementById("select-month");
 const inputYear = document.getElementById("select-year");
+const checkbox = document.getElementById("check");
 
 inputName.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
@@ -49,9 +50,21 @@ inputYear.addEventListener("blur", (eventOne) => {
     validaOne(); 
 });
 
+// checkbox.addEventListener("click", function(){
+
+//     checkbox.checked = false; 
+
+//     if(checkbox.checked == true) {
+//         checkbox.checked = false
+//     } else {
+//         checkbox.checked = true;
+//         validaOne(); 
+//     }  
+// });  
+
 function validaOne() { 
     const username = document.getElementById("username"); 
-    const email = document.getElementById("email"); 
+    const email = document.getElementById("email");  
     const buttonOne = document.getElementById("botao-next-um"); 
     const buttonSocial = document.getElementById("botao-social");
     const checkValida = document.getElementById("check")
@@ -86,7 +99,7 @@ function validaOne() {
     }
 
     // validando a navegação
-    if(usernameValida == true && emailValida == true) {
+    if(usernameValida == true && emailValida == true) { 
         buttonSocial.style.pointerEvents = "visible"; 
     } else {
         buttonSocial.style.pointerEvents = "none"; 

@@ -18,9 +18,13 @@
     pointer-events: none;
   }
 
-  .botao__certificates {
-    pointer-events: none; 
+  #botaoMore {
+    pointer-events: visible;
   }
+
+  // .botao__certificates {
+  //   pointer-events: none; 
+  // }
 }
 
 .button__position {
