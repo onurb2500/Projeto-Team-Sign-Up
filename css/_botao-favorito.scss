@@ -1,0 +1,15 @@
+.button__favorito{
+  display: flex;
+    input{
+      width: 92%;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .button-favorito{
+    background: transparent;
+    border: 2px solid #aaaaaa;
+    border-radius: 0 4px 4px 0px;
+    border-left: none;
+  }
+}
