@@ -3,7 +3,7 @@ var date = new Date();
 
 // Pegando o dia, mês e ano
 var day = date.getDate();
-var month = date.getMonth() + 1 ;
+var month = date.getMonth();
 var year = date.getFullYear();
 
 //Pegando o input de dia, mês e ano
@@ -14,21 +14,35 @@ var inputYear = document.querySelector("#select-year").value;
 var inputYearEvent = document.querySelector("#select-year");
 
 inputYearEvent.addEventListener("blur", function() {
-    
-    calcula();
+    calcula;
     console.log("teste");
 })
 
 function calcula() {
 
+    var dayVal;
+    var monthVal;
     var age;
 
-    age = year - inputYear;
-    console.log(age);
-    if(month < inputMonth || month == inputMonth && day < inputDay) {
-        age--;
-        console.log(age);
+    if ((day-inputDay)<0) {
+        dayVal = false;
+    }else {
+        dayVal = true;
     }
+    
+    if ((month-inputMonth)<0) {
+        monthVal = false;
+    }else {
+        monthVal = true;
+    }
+
+    if (dayVal && monthVal) {
+        age = (year - inputYear)
+    }else{
+        age = ((year - inputYear)-1)
+    }
+
+    console.log(age);
     return age;
 }
 
