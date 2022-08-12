@@ -101,6 +101,7 @@ function validaOne() {
 
     // validando a navegação - basic
     var name;
+    // validando a navegação
     if (usernameValida == true && emailValida == true) {
         buttonSocial.style.pointerEvents = "visible";
         localStorage.name = username.value;
@@ -208,13 +209,18 @@ function setSucessFor(input) {
     formControl.className = "form-control sucess";
 }
 
-// function inicia() {
-//     username.value=localStorage.name;
-//     inputNickname.value=localStorage.nickname;
-//     email.value=localStorage.email;
-//     inputPhone.value=localStorage.phone;
-//     age.value=localStorage.age;
-//     validaOne();
-// }
+function inicia() {
+    username.value = localStorage.name;
+    inputNickname.value = localStorage.nickname;
+    email.value = localStorage.email;
+    inputPhone.value = localStorage.phone;
+    age.value = localStorage.age;
+    validaOne();
+}
 
-window.addEventListener("load", inicia);
+window.addEventListener("load", function () {
+    if ((localStorage.name !== null && localStorage.name !== undefined)) {
+        username.value = localStorage.name;
+        validaOne();
+    }
+});
