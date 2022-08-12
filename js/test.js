@@ -148,7 +148,7 @@ function validacaoTwo() {
     var githubValida = false;
 
     if (github.value == "") {
-        setErrorFor(github, "O GitHub é obrigatório.");
+        setErrorFor(github, "Mandatory github.");
     } else {
         setSucessFor(github);
         githubValida = true;
@@ -217,21 +217,21 @@ function validacaoThree() {
     var graduationValida = false;
 
     if (teamName.value == "") {
-        setErrorFor(teamName, "O certificado é obrigatório.");
+        setErrorFor(teamName, "Mandatory Team Name.");
     } else {
         setSucessFor(teamName);
         teamNameValida = true;
     }
 
     if (institution.value == "") {
-        setErrorFor(institution, "A institution é obrigatório.");
+        setErrorFor(institution, "Mandatory institution.");
     } else {
         setSucessFor(institution);
         institutionValida = true;
     }
 
     if (graduation.value == "") {
-        setErrorFor(graduation, "O graduation é obrigatório.");
+        setErrorFor(graduation, "Mandatory graduation."); 
     } else {
         setSucessFor(graduation);
         graduationValida = true;

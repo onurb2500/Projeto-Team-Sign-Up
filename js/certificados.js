@@ -64,5 +64,7 @@ botaoMore.addEventListener("click", function (event) {
             botaoMore.style.pointerEvents = "visible";
         }
     });
+
+    // botaoBasic.style.parentEvent = "visible"; 
 });
 
