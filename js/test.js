@@ -180,13 +180,13 @@ function setSucessFor(input) {
     formControl.className = "form-control sucess";
 }
 
-function inicia() {
-    username.value=localStorage.name;
-    inputNickname.value=localStorage.nickname;
-    email.value=localStorage.email;
-    inputPhone.value=localStorage.phone;
-    age.value=localStorage.age;
-    validaOne();
-}
+// function inicia() {
+//     username.value=localStorage.name;
+//     inputNickname.value=localStorage.nickname;
+//     email.value=localStorage.email;
+//     inputPhone.value=localStorage.phone;
+//     age.value=localStorage.age;
+//     validaOne();
+// }
 
 window.addEventListener("load", inicia);
