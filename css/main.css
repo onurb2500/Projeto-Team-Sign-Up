@@ -44,6 +44,15 @@ body .form-certificates {
   background-color: transparent;
   border: none;
 }
+.botoes-nav .botao-hability {
+  color: #074ee8;
+}
+.botoes-nav .botao__social {
+  pointer-events: none;
+}
+.botoes-nav .botao__certificates {
+  pointer-events: none;
+}
 
 .button__position {
   display: flex;

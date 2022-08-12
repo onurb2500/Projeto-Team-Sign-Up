@@ -9,6 +9,18 @@
     background-color: transparent;
     border: none;
   }
+
+  .botao-hability {
+    color: $color-azul-principal;
+  }
+
+  .botao__social {
+    pointer-events: none;
+  }
+
+  .botao__certificates {
+    pointer-events: none; 
+  }
 }
 
 .button__position {
