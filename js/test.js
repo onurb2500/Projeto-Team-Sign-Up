@@ -99,7 +99,7 @@ function validaOne() {
     //     setSucessFor(checkValida); 
     // }
 
-    // validando a navegação
+    // validando a navegação - basic
     var name;
     if (usernameValida == true && emailValida == true) {
         buttonSocial.style.pointerEvents = "visible";
@@ -115,6 +115,20 @@ function validaOne() {
 
 // validação Social
 const buttonTwo = document.getElementById("botao-next-dois");
+const inputLink = document.getElementById("linkedin");
+const inputGitHub = document.getElementById("github");
+
+inputGitHub.addEventListener("blur", (eventTwo) => {
+    eventTwo.preventDefault();
+
+    validacaoTwo();  
+});
+
+inputLink.addEventListener("blur", (eventTwo) => {
+    eventTwo.preventDefault();
+
+    validacaoTwo();
+});
 
 buttonTwo.addEventListener("click", (eventTwo) => {
     eventTwo.preventDefault();
@@ -124,12 +138,26 @@ buttonTwo.addEventListener("click", (eventTwo) => {
 
 function validacaoTwo() {
     const github = document.getElementById("github");
+    const buttonCertificates = document.getElementById("botao-certificates"); 
+    var githubValida = false;
 
     if (github.value == "") {
         setErrorFor(github, "O GitHub é obrigatório.");
     } else {
         setSucessFor(github);
+        githubValida = true; 
     }
+
+    // localSto..
+    if (githubValida == true) {
+        buttonCertificates.style.pointerEvents = "visible";
+        localStorage.github = github.value;
+        localStorage.linkedin = inputLink.value;
+
+    } else {
+        buttonCertificates.style.pointerEvents = "none"; 
+    }
+    
 }
 
 // validação Certificates
