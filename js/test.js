@@ -54,6 +54,7 @@ function validaOne() {
     const email = document.getElementById("email"); 
     const buttonOne = document.getElementById("botao-next-um"); 
     const buttonSocial = document.getElementById("botao-social");
+    const checkValida = document.getElementById("check")
     var usernameValida = false; 
     var emailValida = false; 
 
@@ -77,6 +78,12 @@ function validaOne() {
         setSucessFor(email); 
         emailValida = true;  
     } 
+
+    if(checkValida.value == "") {
+        setErrorFor(checkValida); 
+    } else {
+        setSucessFor(checkValida); 
+    }
 
     // validando a navegação
     if(usernameValida == true && emailValida == true) {
