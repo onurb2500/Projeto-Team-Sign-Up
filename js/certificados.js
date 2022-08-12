@@ -38,7 +38,7 @@ botaoMore.addEventListener("click", function (event) {
         botaoMore.style.pointerEvents = "none";
     } else {
         botaoMore.style.pointerEvents = "visible";
-    }
+    } 
 
     buttonFav.addEventListener("click", function (event) {
         event.preventDefault();

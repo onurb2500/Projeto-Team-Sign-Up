@@ -34,18 +34,30 @@ body .form-certificates {
 
 .botoes-nav {
   display: flex;
-  justify-content: space-evenly;
   padding-bottom: 0.4rem;
   text-align: center;
-  border-bottom: 1px solid #aaaaaa;
 }
 .botoes-nav .botao__nav {
   font-weight: 400;
   background-color: transparent;
   border: none;
+  margin: 0;
+  width: 33.33%;
 }
 .botoes-nav .botao-hability {
   color: #074ee8;
+  border-bottom: 1px solid #074ee8;
+}
+.botoes-nav .botao-desability {
+  color: #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  pointer-events: none;
+}
+.botoes-nav #botao-social {
+  pointer-events: none;
+}
+.botoes-nav #botao__certificates {
+  pointer-events: none;
 }
 .botoes-nav #botaoMore {
   pointer-events: visible;
@@ -64,6 +76,7 @@ body .form-certificates {
   color: #074ee8;
   font-weight: 400;
   padding: 11px;
+  pointer-events: none;
 }
 .button__position .button__next {
   background-image: url(/img/Trailing\ Icon.svg);
@@ -94,6 +107,7 @@ body .form-certificates {
   gap: 0.2rem;
   align-items: center;
   justify-content: center;
+  pointer-events: visible;
 }
 
 .form-control {

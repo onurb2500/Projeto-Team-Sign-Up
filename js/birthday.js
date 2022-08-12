@@ -13,6 +13,7 @@ var inputYearEvent = document.querySelector("#select-year");
 inputYearEvent.addEventListener("blur", function() {
     
     calcula();
+    adiciona(calcula()); 
 })
 
 function calcula() {
@@ -37,7 +38,7 @@ function calcula() {
 
 function adiciona(age) {
     var h4 = document.querySelector("#age");
-    h4.textContent = age;
+    h4.value = age;
 }
 
 

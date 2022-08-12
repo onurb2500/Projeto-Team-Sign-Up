@@ -64,7 +64,7 @@ inputYear.addEventListener("blur", (eventOne) => {
 
 function validaOne() {
     const username = document.getElementById("username");
-    const age = document.getElementById("age");
+    const age = document.getElementById("age"); 
     const email = document.getElementById("email");
     const buttonOne = document.getElementById("botao-next-um");
     const buttonSocial = document.getElementById("botao-social");
@@ -109,8 +109,13 @@ function validaOne() {
         localStorage.email = email.value;
         localStorage.phone = inputPhone.value;
         localStorage.age = age.value;
+
+        buttonOne.classList.add("button__next-ability"); 
+        buttonOne.style.pointerEvents = "visible"; 
     } else {
         buttonSocial.style.pointerEvents = "none";
+        buttonOne.classList.remove("button__next-ability"); 
+        buttonOne.style.pointerEvents = "none"; 
     }
 }
 
@@ -122,7 +127,7 @@ const inputGitHub = document.getElementById("github");
 inputGitHub.addEventListener("blur", (eventTwo) => {
     eventTwo.preventDefault();
 
-    validacaoTwo();  
+    validacaoTwo();
 });
 
 inputLink.addEventListener("blur", (eventTwo) => {
@@ -139,14 +144,14 @@ buttonTwo.addEventListener("click", (eventTwo) => {
 
 function validacaoTwo() {
     const github = document.getElementById("github");
-    const buttonCertificates = document.getElementById("botao-certificates"); 
+    const buttonCertificates = document.getElementById("botao-certificates");
     var githubValida = false;
 
     if (github.value == "") {
         setErrorFor(github, "O GitHub é obrigatório.");
     } else {
         setSucessFor(github);
-        githubValida = true; 
+        githubValida = true;
     }
 
     // localSto..
@@ -155,14 +160,46 @@ function validacaoTwo() {
         localStorage.github = github.value;
         localStorage.linkedin = inputLink.value;
 
+        buttonTwo.classList.add("button__next-ability"); 
+        buttonTwo.style.pointerEvents = "visible";
     } else {
-        buttonCertificates.style.pointerEvents = "none"; 
+        buttonCertificates.style.pointerEvents = "none";
+        buttonTwo.classList.remove("button__next-ability");
     }
-    
+
 }
 
 // validação Certificates
 const buttonThree = document.getElementById("botao-finish");
+const inputCerficates = document.getElementById("cerficates");
+const inputTeamName = document.getElementById("teamName");
+const inputInstitution = document.getElementById("institution");
+const inputGraduation = document.getElementById("graduation");
+
+inputCerficates.addEventListener("blur", (eventThree) => {
+    eventThree.preventDefault();
+
+    validacaoThree();
+});
+
+inputTeamName.addEventListener("blur", (eventThree) => {
+    eventThree.preventDefault();
+
+    validacaoThree();
+});
+
+inputInstitution.addEventListener("blur", (eventThree) => {
+    eventThree.preventDefault();
+
+    validacaoThree();
+});
+
+inputGraduation.addEventListener("blur", (eventThree) => {
+    eventThree.preventDefault();
+
+    validacaoThree();
+});
+
 
 buttonThree.addEventListener("click", (eventThree) => {
     eventThree.preventDefault();
@@ -171,26 +208,45 @@ buttonThree.addEventListener("click", (eventThree) => {
 });
 
 function validacaoThree() {
+    const buttonBasic = document.getElementById("botao-basic");
     const teamName = document.getElementById("teamName");
     const institution = document.getElementById("institution");
     const graduation = document.getElementById("graduation");
+    var teamNameValida = false;
+    var institutionValida = false;
+    var graduationValida = false;
 
     if (teamName.value == "") {
         setErrorFor(teamName, "O certificado é obrigatório.");
     } else {
         setSucessFor(teamName);
+        teamNameValida = true;
     }
 
     if (institution.value == "") {
         setErrorFor(institution, "A institution é obrigatório.");
     } else {
         setSucessFor(institution);
+        institutionValida = true;
     }
 
     if (graduation.value == "") {
         setErrorFor(graduation, "O graduation é obrigatório.");
     } else {
         setSucessFor(graduation);
+        graduationValida = true;
+    }
+
+    // validando e localStorage
+    // validando a navegação
+    if (teamNameValida == true && institutionValida == true && graduationValida == true) {
+        buttonBasic.style.pointerEvents = "visible";
+        localStorage.cerficates = inputCerficates.value;
+        localStorage.teamName = teamName.value;
+        localStorage.institution = institution.value;
+        localStorage.graduation = graduation.value; 
+    } else {
+        buttonBasic.style.pointerEvents = "none";
     }
 }
 
