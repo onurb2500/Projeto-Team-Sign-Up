@@ -21,10 +21,11 @@ botaoBasic.addEventListener("click", function () {
 botaoSocial.addEventListener("click", function () {
     slideFirst.style.marginLeft = "-33.33%";
     botaoBasic.classList.add("botao-desability");
+    botaoBasic.style.pointerEvents = "visible"
     botaoSocial.classList.add("botao-hability"); 
     botaoSocial.classList.remove("botao-desability");
     botaoCertificates.classList.remove("botao-hability");
-    botaoCertificates.classList.add("botao-desability"); 
+    botaoCertificates.classList.add("botao-desability");
 });
 
 botaoCertificates.addEventListener("click", function () {

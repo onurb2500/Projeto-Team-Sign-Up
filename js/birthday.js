@@ -9,12 +9,29 @@ var year = date.getFullYear();
 //Pegando o input de dia, mês e ano
 
 var inputYearEvent = document.querySelector("#select-year");
+var inputMonthEvent = document.querySelector("#select-month");
+var inputDayEvent = document.querySelector("#select-day");
 
-inputYearEvent.addEventListener("blur", function() {
+
+inputYearEvent.addEventListener("click", function() {
     
     calcula();
     adiciona(calcula()); 
-})
+});
+
+inputMonthEvent.addEventListener("click", function() {
+    if (age.value !== ""){
+        calcula();
+        adiciona(calcula()); 
+    }
+});
+
+inputDayEvent.addEventListener("click", function() {
+    if (day.value !== ""){
+        calcula();
+        adiciona(calcula()); 
+    }
+});
 
 function calcula() {
     var inputDate = document.querySelector("#select-day").value;

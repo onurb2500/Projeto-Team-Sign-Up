@@ -64,11 +64,16 @@ inputYear.addEventListener("blur", (eventOne) => {
 
 function validaOne() {
     const username = document.getElementById("username");
-    const age = document.getElementById("age"); 
+    const age = document.getElementById("age");
     const email = document.getElementById("email");
     const buttonOne = document.getElementById("botao-next-um");
     const buttonSocial = document.getElementById("botao-social");
-    const checkValida = document.getElementById("check")
+    const buttonCertificates = document.getElementById("botao-certificates");
+    const checkValida = document.getElementById("check");
+    const inputPhone = document.getElementById("phone");
+    var selectDay = document.getElementById("select-day");
+
+
     var usernameValida = false;
     var emailValida = false;
 
@@ -109,13 +114,18 @@ function validaOne() {
         localStorage.email = email.value;
         localStorage.phone = inputPhone.value;
         localStorage.age = age.value;
+        localStorage.selDay = selectDay.value;
 
-        buttonOne.classList.add("button__next-ability"); 
-        buttonOne.style.pointerEvents = "visible"; 
+        buttonOne.classList.add("button__next-ability");
+        buttonOne.style.pointerEvents = "visible";
+        selectDay.value = localStorage.selDay;
+
     } else {
         buttonSocial.style.pointerEvents = "none";
-        buttonOne.classList.remove("button__next-ability"); 
-        buttonOne.style.pointerEvents = "none"; 
+        buttonOne.classList.remove("button__next-ability");
+        buttonOne.style.pointerEvents = "none";
+        buttonCertificates.style.pointerEvents = "none";
+
     }
 }
 
@@ -160,8 +170,12 @@ function validacaoTwo() {
         localStorage.github = github.value;
         localStorage.linkedin = inputLink.value;
 
-        buttonTwo.classList.add("button__next-ability"); 
+        buttonTwo.classList.add("button__next-ability");
         buttonTwo.style.pointerEvents = "visible";
+
+        botaoBasic.style.pointerEvents = "visible";
+
+
     } else {
         buttonCertificates.style.pointerEvents = "none";
         buttonTwo.classList.remove("button__next-ability");
@@ -231,7 +245,7 @@ function validacaoThree() {
     }
 
     if (graduation.value == "") {
-        setErrorFor(graduation, "Mandatory graduation."); 
+        setErrorFor(graduation, "Mandatory graduation.");
     } else {
         setSucessFor(graduation);
         graduationValida = true;
@@ -244,9 +258,7 @@ function validacaoThree() {
         localStorage.cerficates = inputCerficates.value;
         localStorage.teamName = teamName.value;
         localStorage.institution = institution.value;
-        localStorage.graduation = graduation.value; 
-    } else {
-        buttonBasic.style.pointerEvents = "none";
+        localStorage.graduation = graduation.value;
     }
 }
 
@@ -269,14 +281,28 @@ function inicia() {
     username.value = localStorage.name;
     inputNickname.value = localStorage.nickname;
     email.value = localStorage.email;
-    inputPhone.value = localStorage.phone;
+    inputPhone.innerHTML = localStorage.phone;
     age.value = localStorage.age;
     validaOne();
 }
 
+
 window.addEventListener("load", function () {
     if ((localStorage.name !== null && localStorage.name !== undefined)) {
         username.value = localStorage.name;
+        validaOne();
+    }
+    if ((localStorage.nickname !== null && localStorage.nickname !== undefined)) {
+        inputNickname.value = localStorage.nickname;
+        validaOne();
+    }
+    if ((localStorage.name !== null && localStorage.name !== undefined)) {
+        email.value = localStorage.email;
+        validaOne();
+    }
+    if ((localStorage.name !== null && localStorage.name !== undefined)) {
+        inputPhone.value = localStorage.phone;
+        console.log(inputPhone.value);
         validaOne();
     }
 });
