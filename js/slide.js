@@ -3,7 +3,7 @@ var botaoSocial = document.getElementById("botao-social");
 var botaoCertificates = document.getElementById("botao-certificates");
 var botaoNextUm = document.getElementById("botao-next-um");
 var botaoNextDois = document.getElementById("botao-next-dois");
-var botaoFinish = document.getElementById("botao-finish");
+const botaoFinish = document.getElementById("botao-finish");
 var slideFirst = document.getElementById("first"); 
 
 // Paginação através dos botões superiores

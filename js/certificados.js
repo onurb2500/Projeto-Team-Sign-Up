@@ -45,6 +45,8 @@ botaoMore.addEventListener("click", function (event) {
         var alvo = event.target;
         var paiDoAlvo = alvo.parentNode;
         var avoDoAlvo = paiDoAlvo.parentNode;
+        alvo.classList.add("button-favorito-selected");
+        console.log(alvo);
 
         avoDoAlvo.remove();
 

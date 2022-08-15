@@ -241,6 +241,17 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
 }
+.button__favorito .button-favorito-selected {
+  background: transparent;
+  border: 2px solid #aaaaaa;
+  border-radius: 0 4px 4px 0px;
+  border-left: none;
+  width: 40px;
+  background-image: url(/img/VectorBlue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(13px);
+}
 
 ul {
   list-style: none;

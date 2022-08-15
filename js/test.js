@@ -149,16 +149,17 @@ function validaOne() {
 
 // validação Social
 const buttonTwo = document.getElementById("botao-next-dois");
-const inputLink = document.getElementById("linkedin");
+const inputLinke = document.getElementById("linkedin");
 const inputGitHub = document.getElementById("github");
 
 inputGitHub.addEventListener("blur", (eventTwo) => {
     eventTwo.preventDefault();
 
     validacaoTwo();
+    console.log(inputLink);
 });
 
-inputLink.addEventListener("blur", (eventTwo) => {
+inputLinke.addEventListener("blur", (eventTwo) => {
     if (inputGitHub.value !== "") {
         eventTwo.preventDefault();
         validacaoTwo();
@@ -173,6 +174,7 @@ buttonTwo.addEventListener("click", (eventTwo) => {
 
 function validacaoTwo() {
     const github = document.getElementById("github");
+    const linkedin = document.getElementById("linkedin");
     const buttonCertificates = document.getElementById("botao-certificates");
     var githubValida = false;
 
@@ -187,7 +189,7 @@ function validacaoTwo() {
     if (githubValida == true) {
         buttonCertificates.style.pointerEvents = "visible";
         localStorage.github = github.value;
-        localStorage.linkedin = inputLink.value;
+        localStorage.linkedin = linkedin.value;
 
         buttonTwo.classList.add("button__next-ability");
         buttonTwo.style.pointerEvents = "visible";
@@ -200,6 +202,8 @@ function validacaoTwo() {
         buttonCertificates.style.pointerEvents = "none";
         buttonTwo.classList.remove("button__next-ability");
     }
+    localStorage.linkedin = linkedin.value;
+
 
 }
 
@@ -212,12 +216,17 @@ const inputGraduation = document.getElementById("graduation");
 
 inputCerficates.addEventListener("blur", (eventThree) => {
     eventThree.preventDefault();
-
-    validacaoThree();
 });
 
 inputTeamName.addEventListener("blur", (eventThree) => {
     eventThree.preventDefault();
+    if (teamName.value == "") {
+        setErrorFor(teamName, "Mandatory Team Name.");
+    } else {
+        setSucessFor(teamName);
+        teamNameValida = true;
+        localStorage.teamName = teamName.value;
+    }
 
     validacaoThree();
 });
@@ -225,12 +234,26 @@ inputTeamName.addEventListener("blur", (eventThree) => {
 inputInstitution.addEventListener("blur", (eventThree) => {
     eventThree.preventDefault();
 
+    if (institution.value == "") {
+        setErrorFor(institution, "Mandatory institution.");
+    } else {
+        setSucessFor(institution);
+        institutionValida = true;
+        localStorage.institution = institution.value;
+    }
     validacaoThree();
 });
 
 inputGraduation.addEventListener("blur", (eventThree) => {
     eventThree.preventDefault();
 
+    if (graduation.value == "") {
+        setErrorFor(graduation, "Mandatory graduation.");
+    } else {
+        setSucessFor(graduation);
+        graduationValida = true;
+        localStorage.graduation = graduation.value;
+    }
     validacaoThree();
 });
 
@@ -250,35 +273,14 @@ function validacaoThree() {
     var institutionValida = false;
     var graduationValida = false;
 
-    if (teamName.value == "") {
-        setErrorFor(teamName, "Mandatory Team Name.");
-    } else {
-        setSucessFor(teamName);
-        teamNameValida = true;
-    }
 
-    if (institution.value == "") {
-        setErrorFor(institution, "Mandatory institution.");
-    } else {
-        setSucessFor(institution);
-        institutionValida = true;
-    }
 
-    if (graduation.value == "") {
-        setErrorFor(graduation, "Mandatory graduation.");
-    } else {
-        setSucessFor(graduation);
-        graduationValida = true;
-    }
 
     // validando e localStorage
     // validando a navegação
     if (teamNameValida == true && institutionValida == true && graduationValida == true) {
         buttonBasic.style.pointerEvents = "visible";
         localStorage.cerficates = inputCerficates.value;
-        localStorage.teamName = teamName.value;
-        localStorage.institution = institution.value;
-        localStorage.graduation = graduation.value;
     }
 }
 
@@ -297,14 +299,12 @@ function setSucessFor(input) {
     formControl.className = "form-control sucess";
 }
 
-function inicia() {
-    username.value = localStorage.name;
-    inputNickname.value = localStorage.nickname;
-    email.value = localStorage.email;
-    inputPhone.innerHTML = localStorage.phone;
-    age.value = localStorage.age;
-    validaOne();
-}
+const ancorFinish = document.getElementById("ancorFinish");
+ancorFinish.addEventListener("click", function () {
+    alert("Seus dados foram salvos com sucesso!");
+});
+
+
 
 
 window.addEventListener("load", function () {
@@ -348,6 +348,31 @@ window.addEventListener("load", function () {
         selectYear.value = localStorage.selYear;
         adiciona(calcula());
         validaOne();
+    }
+    if ((localStorage.github !== null && localStorage.github !== undefined)) {
+        github.value = localStorage.github;
+        adiciona(calcula());
+        validacaoTwo();
+    }
+    if ((localStorage.linkedin !== null && localStorage.linkedin !== undefined)) {
+        linkedin.value = localStorage.linkedin;
+        adiciona(calcula());
+        validacaoTwo();
+    }
+    if ((localStorage.teamName !== null && localStorage.teamName !== undefined)) {
+        teamName.value = localStorage.teamName;
+        setSucessFor(teamName);
+        validacaoThree();
+    }
+    if ((localStorage.institution !== null && localStorage.institution !== undefined)) {
+        institution.value = localStorage.institution;
+        setSucessFor(institution);
+        validacaoThree();
+    }
+    if ((localStorage.graduation !== null && localStorage.graduation !== undefined)) {
+        graduation.value = localStorage.graduation;
+        setSucessFor(graduation);
+        validacaoThree();
     }
 
 
