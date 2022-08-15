@@ -26,13 +26,13 @@ inputEmail.addEventListener("blur", verifica);
         // pegando os valores dos input
         const usernameValue = inputName.value;
         const emailValue = inputEmail.value;
-        console.log(emailValue);
+        //(emailValue);
 
         // verificando um de cada vez
         if (usernameValue == "") {
             setErrorFor(username, "Full name required.");
         } else {
-            console.log("entrando");
+            //("entrando");
             setSucessFor(username);
             inputNameVal = true;
         }

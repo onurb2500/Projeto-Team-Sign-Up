@@ -41,15 +41,15 @@ function calcula() {
     var age;
 
     age = year - inputYearr;
-    console.log(inputDate);
-    console.log(inputMonthh);
-    console.log(inputYearr);
+    //(inputDate);
+    //(inputMonthh);
+    //(inputYearr);
 
 
     if(month < inputMonthh || month == inputMonthh && day < inputDate) {
         age--;
     }
-    console.log(age);
+    //(age);
     return age;
 }
 

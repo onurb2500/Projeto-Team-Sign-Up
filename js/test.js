@@ -10,6 +10,7 @@ const selectDay = document.getElementById("select-day");
 const selectMonth = document.getElementById("select-month");
 const selectYear = document.getElementById("select-year");
 var checkbox = document.getElementById("check");
+const buttonCertificates = document.getElementById("botao-certificates");
 var checkboxValida;
 var usernameValida = false;
 var emailValida = false;
@@ -20,6 +21,7 @@ inputName.addEventListener("blur", (eventOne) => {
 
     if (username.value == "") {
         setErrorFor(username, "Full name required.");
+        buttonCertificates.style.pointerEvents = "none";
     } else {
         setSucessFor(username);
         usernameValida = true;
@@ -95,11 +97,11 @@ inputYear.addEventListener("blur", (eventOne) => {
 
 checkbox.addEventListener("click", function () {
     if (checkbox.checked) {
-        console.log();
+        //();
         checkboxValida = 1;
         validaOne();
     } else {
-        console.log("não selecionado");
+        //("não selecionado");
         checkboxValida = 0;
         validaOne();
 
@@ -127,8 +129,8 @@ function validaOne() {
     // validando a navegação - basic
     var name;
     // validando a navegação
-    console.log(usernameValida);
-    console.log(emailValida);
+    //(usernameValida);
+    //(emailValida);
 
     if (usernameValida == true && emailValida == true && checkboxValida == 1) {
         buttonSocial.style.pointerEvents = "visible";
@@ -156,7 +158,7 @@ inputGitHub.addEventListener("blur", (eventTwo) => {
     eventTwo.preventDefault();
 
     validacaoTwo();
-    console.log(inputLink);
+    //(inputLink);
 });
 
 inputLinke.addEventListener("blur", (eventTwo) => {
@@ -165,6 +167,7 @@ inputLinke.addEventListener("blur", (eventTwo) => {
         validacaoTwo();
     }
 });
+
 
 buttonTwo.addEventListener("click", (eventTwo) => {
     eventTwo.preventDefault();
@@ -190,6 +193,8 @@ function validacaoTwo() {
         buttonCertificates.style.pointerEvents = "visible";
         localStorage.github = github.value;
         localStorage.linkedin = linkedin.value;
+        console.log("linkedin");
+        console.log(linkedin.value);
 
         buttonTwo.classList.add("button__next-ability");
         buttonTwo.style.pointerEvents = "visible";
@@ -202,7 +207,6 @@ function validacaoTwo() {
         buttonCertificates.style.pointerEvents = "none";
         buttonTwo.classList.remove("button__next-ability");
     }
-    localStorage.linkedin = linkedin.value;
 
 
 }
@@ -327,13 +331,13 @@ window.addEventListener("load", function () {
     }
     if ((localStorage.phone !== null && localStorage.phone !== undefined)) {
         inputPhone.value = localStorage.phone;
-        console.log(inputPhone.value);
+        //(inputPhone.value);
         setSucessFor(inputPhone);
         validaOne();
     }
     if ((localStorage.selDay !== null && localStorage.selDay !== undefined)) {
         selectDay.value = localStorage.selDay;
-        console.log(selectDay.value);
+        //(selectDay.value);
         validaOne();
         adiciona(calcula());
 
@@ -351,14 +355,15 @@ window.addEventListener("load", function () {
     }
     if ((localStorage.github !== null && localStorage.github !== undefined)) {
         github.value = localStorage.github;
-        adiciona(calcula());
-        validacaoTwo();
-    }
-    if ((localStorage.linkedin !== null && localStorage.linkedin !== undefined)) {
         linkedin.value = localStorage.linkedin;
-        adiciona(calcula());
         validacaoTwo();
     }
+    // if ((localStorage.linkedin !== null && localStorage.linkedin !== undefined)) {
+    //     console.log("localStorage");
+    //     console.log(localStorage.linkedin);
+    //     linkedin.value = localStorage.linkedin;
+    //     validacaoTwo();
+    // }
     if ((localStorage.teamName !== null && localStorage.teamName !== undefined)) {
         teamName.value = localStorage.teamName;
         setSucessFor(teamName);
@@ -375,5 +380,7 @@ window.addEventListener("load", function () {
         validacaoThree();
     }
 
+    const listaCertificados = document.querySelectorAll("#ul li").value;
+    //(listaCertificados);
 
 });
