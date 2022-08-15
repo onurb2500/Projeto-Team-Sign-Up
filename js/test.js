@@ -6,61 +6,105 @@ const inputPhone = document.getElementById("phone");
 const inputDay = document.getElementById("select-day");
 const inputMonth = document.getElementById("select-month");
 const inputYear = document.getElementById("select-year");
-const checkbox = document.getElementById("check");
+const selectDay = document.getElementById("select-day");
+const selectMonth = document.getElementById("select-month");
+const selectYear = document.getElementById("select-year");
+var checkbox = document.getElementById("check");
+var checkboxValida;
+var usernameValida = false;
+var emailValida = false;
+
 
 inputName.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    if (username.value == "") {
+        setErrorFor(username, "Full name required.");
+    } else {
+        setSucessFor(username);
+        usernameValida = true;
+        localStorage.name = username.value;
+    }
 });
+
 
 inputNickname.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    if (inputNickname.value == "") {
+        inputNickname.parentElement.classList.remove("sucess")
+    } else {
+        setSucessFor(inputNickname);
+        localStorage.nickname = inputNickname.value;
+
+    }
 });
 
 inputEmail.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    if (email.value == "") {
+        setErrorFor(email, "Mandatory email.");
+    } else {
+        setSucessFor(email);
+        emailValida = true;
+        localStorage.email = email.value;
+    }
+
+    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
+        setErrorFor(email, "Enter a valid email.");
+    } else {
+        setSucessFor(email);
+        emailValida = true;
+        localStorage.email = email.value;
+
+    }
 });
 
 inputPhone.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    if (inputPhone.value == "") {
+        inputPhone.parentElement.classList.remove("sucess")
+    } else {
+        setSucessFor(inputPhone);
+        localStorage.phone = inputPhone.value;
+    }
 });
+
 
 inputDay.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    localStorage.selDay = selectDay.value;
 });
+
 
 inputMonth.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    localStorage.selMonth = selectMonth.value;
 });
+
 
 inputYear.addEventListener("blur", (eventOne) => {
     eventOne.preventDefault();
 
-    validaOne();
+    localStorage.selYear = selectYear.value;
 });
 
-// checkbox.addEventListener("click", function(){
+checkbox.addEventListener("click", function () {
+    if (checkbox.checked) {
+        console.log();
+        checkboxValida = 1;
+        validaOne();
+    } else {
+        console.log("não selecionado");
+        checkboxValida = 0;
+        validaOne();
 
-//     checkbox.checked = false; 
-
-//     if(checkbox.checked == true) {
-//         checkbox.checked = false
-//     } else {
-//         checkbox.checked = true;
-//         validaOne(); 
-//     }  
-// });  
+    }
+});
 
 function validaOne() {
     const username = document.getElementById("username");
@@ -74,30 +118,6 @@ function validaOne() {
     var selectDay = document.getElementById("select-day");
 
 
-    var usernameValida = false;
-    var emailValida = false;
-
-    if (username.value == "") {
-        setErrorFor(username, "Full name required.");
-    } else {
-        setSucessFor(username);
-        usernameValida = true;
-    }
-
-    if (email.value == "") {
-        setErrorFor(email, "Mandatory email.");
-    } else {
-        setSucessFor(email);
-        emailValida = true;
-    }
-
-    if (email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1 || (email.value.indexOf(".") - email.value.indexOf("@") == 1)) {
-        setErrorFor(email, "Enter a valid email.");
-    } else {
-        setSucessFor(email);
-        emailValida = true;
-    }
-
     // if(checkValida.value == "") {
     //     setErrorFor(checkValida); 
     // } else {
@@ -107,14 +127,12 @@ function validaOne() {
     // validando a navegação - basic
     var name;
     // validando a navegação
-    if (usernameValida == true && emailValida == true) {
+    console.log(usernameValida);
+    console.log(emailValida);
+
+    if (usernameValida == true && emailValida == true && checkboxValida == 1) {
         buttonSocial.style.pointerEvents = "visible";
-        localStorage.name = username.value;
-        localStorage.nickname = inputNickname.value;
-        localStorage.email = email.value;
-        localStorage.phone = inputPhone.value;
         localStorage.age = age.value;
-        localStorage.selDay = selectDay.value;
 
         buttonOne.classList.add("button__next-ability");
         buttonOne.style.pointerEvents = "visible";
@@ -141,9 +159,10 @@ inputGitHub.addEventListener("blur", (eventTwo) => {
 });
 
 inputLink.addEventListener("blur", (eventTwo) => {
-    eventTwo.preventDefault();
-
-    validacaoTwo();
+    if (inputGitHub.value !== "") {
+        eventTwo.preventDefault();
+        validacaoTwo();
+    }
 });
 
 buttonTwo.addEventListener("click", (eventTwo) => {
@@ -177,6 +196,7 @@ function validacaoTwo() {
 
 
     } else {
+        buttonTwo.style.pointerEvents = "none";
         buttonCertificates.style.pointerEvents = "none";
         buttonTwo.classList.remove("button__next-ability");
     }
@@ -290,19 +310,45 @@ function inicia() {
 window.addEventListener("load", function () {
     if ((localStorage.name !== null && localStorage.name !== undefined)) {
         username.value = localStorage.name;
+        setSucessFor(username);
+        usernameValida = true;
         validaOne();
     }
     if ((localStorage.nickname !== null && localStorage.nickname !== undefined)) {
         inputNickname.value = localStorage.nickname;
+        setSucessFor(inputNickname);
         validaOne();
     }
-    if ((localStorage.name !== null && localStorage.name !== undefined)) {
+    if ((localStorage.email !== null && localStorage.email !== undefined)) {
         email.value = localStorage.email;
+        setSucessFor(email);
+        emailValida = true;
         validaOne();
     }
-    if ((localStorage.name !== null && localStorage.name !== undefined)) {
+    if ((localStorage.phone !== null && localStorage.phone !== undefined)) {
         inputPhone.value = localStorage.phone;
         console.log(inputPhone.value);
+        setSucessFor(inputPhone);
         validaOne();
     }
+    if ((localStorage.selDay !== null && localStorage.selDay !== undefined)) {
+        selectDay.value = localStorage.selDay;
+        console.log(selectDay.value);
+        validaOne();
+        adiciona(calcula());
+
+    }
+    if ((localStorage.selMonth !== null && localStorage.selMonth !== undefined)) {
+        selectMonth.value = localStorage.selMonth;
+        validaOne();
+        adiciona(calcula());
+
+    }
+    if ((localStorage.selYear !== null && localStorage.selYear !== undefined)) {
+        selectYear.value = localStorage.selYear;
+        adiciona(calcula());
+        validaOne();
+    }
+
+
 });

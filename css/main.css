@@ -47,11 +47,12 @@ body .form-certificates {
 .botoes-nav .botao-hability {
   color: #074ee8;
   border-bottom: 1px solid #074ee8;
+  transition: 0.5s;
 }
 .botoes-nav .botao-desability {
   color: #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
-  pointer-events: none;
+  transition: 0.5s;
 }
 .botoes-nav #botao-social {
   pointer-events: none;
@@ -77,6 +78,7 @@ body .form-certificates {
   font-weight: 400;
   padding: 11px;
   pointer-events: none;
+  transition: 0.5s;
 }
 .button__position .button__next {
   background-image: url(/img/Trailing\ Icon.svg);
@@ -90,6 +92,7 @@ body .form-certificates {
   background-image: url(/img/Trailing\ Icon\ -\ Copia.svg);
   background-repeat: no-repeat;
   background-position: 45px center;
+  transition: 0.5s;
 }
 .button__position .button__certificates {
   padding-right: 10px;
