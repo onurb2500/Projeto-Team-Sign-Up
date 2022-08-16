@@ -193,8 +193,6 @@ function validacaoTwo() {
         buttonCertificates.style.pointerEvents = "visible";
         localStorage.github = github.value;
         localStorage.linkedin = linkedin.value;
-        console.log("linkedin");
-        console.log(linkedin.value);
 
         buttonTwo.classList.add("button__next-ability");
         buttonTwo.style.pointerEvents = "visible";

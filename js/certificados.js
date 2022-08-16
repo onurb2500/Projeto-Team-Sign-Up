@@ -32,7 +32,7 @@ botaoMore.addEventListener("click", function (event) {
 
     arrayUl.push(li);
     arrayValue.push(inputCertificatesValue);
-    localStorage.certificate = arrayValue;
+    localStorage.certificate = JSON.stringify(arrayValue);
     console.log(arrayValue);
 
     if (arrayUl.length >= 5) {
@@ -90,11 +90,24 @@ botaoMore.addEventListener("click", function (event) {
     // botaoBasic.style.parentEvent = "visible"; 
 });
 
-function varreduraCertificados() {
-    for (var i = 0; i < arrayUl.length; i++) {
-        var ul = document.getElementById("ul");
-        ul.appendChild(arrayUl[i].innerHTML);
-    }
+function insereCertificados() {
+    var cert1 = document.getElementById("cert1");
+    var cert2 = document.getElementById("cert2");
+    var cert3 = document.getElementById("cert3");
+    var cert4 = document.getElementById("cert4");
+    var cert5 = document.getElementById("cert5");
+
+    var arrayCertificate = JSON.parse(localStorage.certificate);
+    
+    cert1.value = arrayCertificate[0];
+
+    cert2.value = arrayCertificate[1];
+
+    cert3.value = arrayCertificate[2];
+
+    cert4.value = arrayCertificate[3];
+
+    cert5.value = arrayCertificate[4];
 }
 
 function chamaCertificados() {
